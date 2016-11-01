@@ -19,7 +19,7 @@ return [
     // 应用调试模式
     'app_debug'              => true,
     // 应用Trace
-    'app_trace'              => false,
+    'app_trace'              => true,
     // 应用模式状态
     'app_status'             => '',
     // 是否支持多模块
@@ -128,10 +128,16 @@ return [
         'taglib_begin' => '{',
         // 标签库标签结束标记
         'taglib_end'   => '}',
+		'layout'  => true,
     ],
 
     // 视图输出字符串内容替换
-    'view_replace_str'       => [],
+    'view_replace_str'       => [
+		'__ACSS__' => __PUBLIC__ .'static/admin/css/',
+		'__AJS__' => __PUBLIC__ .'static/admin/js/',
+		'__AIMG__' => __PUBLIC__ .'static/admin/img/',
+		'__AVEND__' => __PUBLIC__ .'static/admin/vendor/',
+	],
     // 默认跳转页面对应的模板文件
     'dispatch_success_tmpl'  => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',
     'dispatch_error_tmpl'    => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',
