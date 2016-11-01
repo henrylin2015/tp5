@@ -30,5 +30,7 @@ Route::post([]);
  */
 Route::get([
 	'/admmin/index/test' => '@admin/Index/test', 
-	'/admmin/' => '@admin/Index/index', 
+	'/admmin/' => '@admin/Index/index',
+	//user
+	'/admin/user/' => '@admin/User/index',
 	]);
